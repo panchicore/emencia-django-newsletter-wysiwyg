@@ -157,3 +157,8 @@ class NewsletterAdmin(admin.ModelAdmin):
         self.message_user(request, _('%s newletters are cancelled') % queryset.count())
     make_cancel_sending.short_description = _('Cancel the sending')
 
+    class Media:
+        js = (
+                'js/tiny_mce/tiny_mce.js',
+                'js/textareas.js',
+            )

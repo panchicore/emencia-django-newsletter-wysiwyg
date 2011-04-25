@@ -100,3 +100,9 @@ class MailingListAdmin(admin.ModelAdmin):
                            url(r'^export/(?P<mailinglist_id>\d+)/$', self.export_subscribers,
                                name='newsletter_mailinglist_export'),)
         return my_urls + urls
+        
+    class Media:
+        js = (
+                'js/tiny_mce/tiny_mce.js',
+                'js/textareas.js',
+            )
